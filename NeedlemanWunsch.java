@@ -23,15 +23,18 @@ public class NeedlemanWunsch {
     for (int i = 0; i < sequence1.length(); i++) {
       resultMatrix[i][0] = i * indelScore;
     }
+    
     for (int j = 0; j < sequence2.length(); j++) {
       resultMatrix[0][j] = resultMatrix[0][j] = j * indelScore;
     }
-
+    
     for (int i = 1; i < sequence1.length(); i++) {
       for (int j = 1; j < sequence2.length(); j++) {
+    	  
         resultMatrix[i][j] = Math.max(resultMatrix[i - 1][j] + indelScore,
         Math.max(resultMatrix[i][j - 1] + indelScore, resultMatrix[i - 1][j - 1] +
         (sequence1.charAt(i) == sequence2.charAt(j) ? matchScore : mismatchScore)));
+        
       }
     }
 
