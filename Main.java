@@ -57,9 +57,9 @@ public class Main {
         
         // Hizalama matrisinin hesaplanmasi
         
-        for(int a = 0; a < 100; a++) {
+        for(int a = 0; a < sequencesList.size(); a++) {
         	
-        	for(int b = a+1; b < 100; b++) {
+        	for(int b = a+1; b < sequencesList.size(); b++) {
         			
         		
 	    		sequence1 = sequencesList.get(a);
